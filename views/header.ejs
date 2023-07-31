@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>LOKESH'S WEBSITE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="create new element" id="inputLink" aria-label="create">
+    <!-- Use an anchor element for the button -->
+    <button class="btn1 special-button" id="redirectButton" href="#" target="_blank">Create</button>
+    <script>
+        // Add an event listener to the anchor element
+        document.getElementById("redirectButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior (i.e., navigating to #)
+            const inputLink = document.getElementById("inputLink").value;
+            // Check if the input is not empty before redirecting
+            if (inputLink.trim() !== "") {
+                window.open(inputLink, "_blank"); // Redirect to the user input link in a new tab
+            } else {
+                alert("Please enter a valid name.");
+            }
+        });
+        document.getElementById("redirectButton").addEventListener("click", redirectToInput);
+        document.getElementById("inputNumber").addEventListener("keypress", function(event) {
+            // Check if the Enter key (key code 13) was pressed
+            if (event.keyCode === 13) {
+                redirectToInput();
+            }
+        });
+
+        function redirectToInput() {
+            const inputNumber = document.getElementById("inputNumber").value;
+            // Validate that the input is a positive integer
+            if (Number.isInteger(+inputNumber) && +inputNumber > 0) {
+                // Redirect to the URL with the integer value
+                window.location.href = "http://localhost:3000/" + inputNumber;
+            } else {
+                alert("Please enter a valid positive integer.");
+            }
+        }
+    </script>
+      </form>
+    </div>
+  </nav>
+</head>
+
+<body>
