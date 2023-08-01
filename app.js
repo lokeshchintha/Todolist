@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Lokesh:Loke@4423@cluster0.jwsjcgi.mongodb.net/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Lokesh:testcluster0.jwsjcgi.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
