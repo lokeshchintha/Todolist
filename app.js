@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://todolist369-server:MhjGY2bqKuNagxAebYE9Ya276PZIUl3FBhZR994vREULjM584MhwEIH4xxfv9QpceznIJvjBQVJbACDbebxh2w==@todolist369-server.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@todolist369-server@" || "mongodb+srv://Lokesh:test@cluster0.31lvhj1.mongodb.net/todolistDB", { useUnifiedTopology: true ,useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Lokesh:test@cluster0.31lvhj1.mongodb.net/todolistDB", { useUnifiedTopology: true ,useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
