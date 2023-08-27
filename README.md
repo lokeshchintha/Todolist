@@ -1,1 +1,1 @@
-check website here : https://lokesh-todolist.azurewebsites.net/
+check website here : http://todolist.lokeshwebsites.tech/
